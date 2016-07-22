@@ -48,10 +48,8 @@ public:
 	{}
 
 	locked_stringstream (std::string s)
-	{
-		boost::mutex::scoped_lock lm (mutex());
-		_stream = std::stringstream(s);
-	}
+		: _stream(s)
+	{}
 
 	template <class T>
 	std::ostream& operator<< (T val)
