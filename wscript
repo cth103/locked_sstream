@@ -17,6 +17,7 @@
 #    along with locked_sstream.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+APPNAME = 'locked_sstream'
 VERSION = '0.0.2devel'
 
 def configure(conf):
@@ -30,3 +31,6 @@ def build(bld):
         install_path='${LIBDIR}/pkgconfig')
 
     bld.install_files('${PREFIX}/include', 'locked_sstream.h')
+
+def dist(ctx):
+    ctx.excl = 'TODO core *~ .git build .waf* .lock* doc/*~ src/*~  __pycache__ GPATH GRTAGS GSYMS GTAGS'
