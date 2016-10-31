@@ -18,7 +18,7 @@
 #
 
 APPNAME = 'locked_sstream'
-VERSION = '0.0.3devel'
+VERSION = '0.0.4'
 
 def configure(conf):
     pass
