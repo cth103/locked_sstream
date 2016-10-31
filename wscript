@@ -17,7 +17,7 @@
 #    along with locked_sstream.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-VERSION = '0.0.1devel'
+VERSION = '0.0.2'
 
 def configure(conf):
     pass
