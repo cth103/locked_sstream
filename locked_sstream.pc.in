@@ -1,0 +1,7 @@
+prefix=@prefix@
+includedir=@includedir@
+
+Name: locked_sstream
+Description: sstream that has a lock so only one thread can use it at once
+Version: @version@
+Cflags: -I${includedir}
