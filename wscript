@@ -17,8 +17,16 @@
 #    along with locked_sstream.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+VERSION = '0.0.1devel'
+
 def configure(conf):
     pass
 
 def build(bld):
+
+    bld(source='locked_sstream.pc.in' % bld.env.API_VERSION,
+        version=VERSION,
+        includedir='%s/include' % bld.env.PREFIX,
+        install_path='${LIBDIR}/pkgconfig')
+
     bld.install_files('${PREFIX}/include', 'locked_sstream.h')
